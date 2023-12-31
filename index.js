@@ -1,6 +1,6 @@
 const express = require("express")
-const path = require("path")
-const quotes = require("./quotes.json")
+// const path = require("path")
+const quotes = require("./Data/quotes.json")
 const app = express()
 const PORT = 80
 
@@ -14,15 +14,17 @@ app.listen(
 
 
 app.get("/", (req, res) => {
-    res.json(
-        {
-            status: 200,
-            message: "API is working as expected",
-            status_code: "ok",
-        }
-    )
+    // res.json(
+    //     {
+    //         status: 200,
+    //         message: "API is working as expected",
+    //         status_code: "ok",
+    //     }
+    // )
 
-    res.sendStatus(200)
+    // res.sendStatus(200)
+    res.sendFile(__dirname + "/index.html")
+    // res.redirect("https://github.com/mudroljub/programming-quotes-api")
 })
 
 
