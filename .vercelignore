@@ -3,6 +3,6 @@
 !index.js
 !package.json
 !package-lock.json
-!/Data/quotes.json
+!./Data/quotes.json
 !vercel.json
 !.vercelignore
